@@ -1,0 +1,24 @@
+<h1>posts</h1>
+<?php
+/** @var \Home\Posts\Block\Posts $block */
+$posts = $block->getPostsByCategory('answers'); ?>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Content</th>
+        <th>Url Key</th>
+        <th>Tags</th>
+        <th>Category</th>
+        <th>Created at</th>
+    </tr>
+    <?php foreach($posts as $post):?>
+    <tr>
+        <td><?=$post['name']; ?></td>
+        <td><?=$post['post_content']; ?></td>
+        <td><?=$post['url_key']; ?></td>
+        <td><?=$post['tags']; ?></td>
+        <td><?=$post['category']; ?></td>
+        <td><?=$post['created_at']; ?></td>
+    </tr>
+    <?php endforeach; ?>
+</table>

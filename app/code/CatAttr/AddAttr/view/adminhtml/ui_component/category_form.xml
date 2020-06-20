@@ -1,0 +1,14 @@
+<!-- CatAttr/AddAttr/view/adminhtml/ui_component/category_form.xml -->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="content">
+        <field name="category_article">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">boolean</item>
+                    <item name="formElement" xsi:type="string">textarea</item>
+                    <item name="label" xsi:type="string" translate="true">Category article</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>
