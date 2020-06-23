@@ -61,12 +61,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
 
     public function getCheckboxValues(){
-        //$values = [];
-        //foreach (self::FIELDS as $field) {
-            //$values[] = $this->getConfigValue(self::XML_PATH .'general/'. $field);
-       // }
-        $value = $this->getConfigValue(self::XML_PATH .'general/'. 'base_price');
-        return $value;
+        $values = [];
+        foreach (self::FIELDS as $field) {
+            $values[] = $this->getConfigValue(self::XML_PATH .'general/'. $field);
+        }
+        return $values;
     }
 
     /**
