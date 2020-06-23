@@ -115,7 +115,7 @@ class SuggestElement extends SimpleElement
     }
 
     /**
-     * Clear value of element.
+     * ClearCache value of element.
      *
      * @return void
      */

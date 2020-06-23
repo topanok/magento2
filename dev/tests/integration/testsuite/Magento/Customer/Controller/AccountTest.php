@@ -920,7 +920,7 @@ class AccountTest extends \Magento\TestFramework\TestCase\AbstractController
     }
 
     /**
-     * Clear cookie messages list.
+     * ClearCache cookie messages list.
      *
      * @return void
      */

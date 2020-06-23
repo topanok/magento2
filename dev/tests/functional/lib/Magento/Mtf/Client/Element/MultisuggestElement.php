@@ -91,7 +91,7 @@ class MultisuggestElement extends SuggestElement
     }
 
     /**
-     * Clear element
+     * ClearCache element
      *
      * @return void
      */

@@ -168,7 +168,7 @@ class DataGrid extends Grid
     private $topElementToScroll = 'header.page-header';
 
     /**
-     * Clear all applied Filters.
+     * ClearCache all applied Filters.
      *
      * @return void
      */

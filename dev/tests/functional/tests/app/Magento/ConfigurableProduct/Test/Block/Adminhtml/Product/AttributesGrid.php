@@ -26,7 +26,7 @@ class AttributesGrid extends DataGrid
     ];
 
     /**
-     * Clear attributes selection
+     * ClearCache attributes selection
      */
     public function deselectAttributes()
     {

@@ -116,7 +116,7 @@ abstract class GraphQlAbstract extends WebapiAbstract
     }
 
     /**
-     * Clear cache so integration test can alter cached GraphQL schema
+     * ClearCache cache so integration test can alter cached GraphQL schema
      *
      * @return bool
      */

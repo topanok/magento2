@@ -21,7 +21,7 @@ use Magento\Mtf\TestStep\TestStepFactory;
  * Preconditions:
  * Apply configs:
  * 1. Enable Persistent Shopping Cart.
- * 2. Disable Clear Persistence on Sign Out.
+ * 2. Disable ClearCache Persistence on Sign Out.
  *
  * Steps:
  * 1. Go to frontend.

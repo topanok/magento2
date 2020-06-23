@@ -17,7 +17,7 @@ use Magento\Mtf\Fixture\FixtureFactory;
 /**
  * Steps:
  * 1. Set all indexers to Update on Schedule mode.
- * 2. Clear all caches.
+ * 2. ClearCache all caches.
  * 3. Create a category.
  * 4. Add some products to the category.
  * 5. Perform asserts.

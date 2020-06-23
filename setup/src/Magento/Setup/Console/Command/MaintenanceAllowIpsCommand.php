@@ -68,7 +68,7 @@ class MaintenanceAllowIpsCommand extends AbstractSetupCommand
                 self::INPUT_KEY_NONE,
                 null,
                 InputOption::VALUE_NONE,
-                'Clear allowed IP addresses'
+                'ClearCache allowed IP addresses'
             ),
             new InputOption(
                 self::INPUT_KEY_ADD,

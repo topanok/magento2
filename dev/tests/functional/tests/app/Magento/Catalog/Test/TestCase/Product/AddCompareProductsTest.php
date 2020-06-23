@@ -68,7 +68,7 @@ class AddCompareProductsTest extends AbstractCompareProductsTest
     }
 
     /**
-     * Clear data after test.
+     * ClearCache data after test.
      *
      * @return void
      */

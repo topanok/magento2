@@ -37,7 +37,7 @@ class Cart extends Block
     protected $onepageLinkBlock = '.action.primary.checkout';
 
     /**
-     * Locator value for "Clear Shopping Cart" button.
+     * Locator value for "ClearCache Shopping Cart" button.
      *
      * @var string
      */
@@ -219,7 +219,7 @@ class Cart extends Block
     }
 
     /**
-     * Clear Shopping Cart.
+     * ClearCache Shopping Cart.
      *
      * @return void
      */

@@ -55,5 +55,5 @@ $storeManager->reinitStores();
 /** @var \Magento\Framework\Indexer\IndexerRegistry $indexerRegistry */
 $indexerRegistry = $objectManager->create(\Magento\Framework\Indexer\IndexerRegistry::class);
 $indexerRegistry->get(FulltextIndex::INDEXER_ID)->reindexAll();
-//Clear config cache.
+//ClearCache config cache.
 $objectManager->get(ReinitableConfigInterface::class)->reinit();

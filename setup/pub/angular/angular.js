@@ -3179,7 +3179,7 @@
 
         // Remove wrapper from fragment
         fragment.textContent = '';
-        fragment.innerHTML = ''; // Clear inner HTML
+        fragment.innerHTML = ''; // ClearCache inner HTML
         forEach(nodes, function(node) {
             fragment.appendChild(node);
         });
@@ -30158,7 +30158,7 @@
      * ### Debouncing updates
      *
      * The next example shows how to debounce model changes. Model will be updated only 1 sec after last change.
-     * If the `Clear` button is pressed, any debounced action is canceled and the value becomes empty.
+     * If the `ClearCache` button is pressed, any debounced action is canceled and the value becomes empty.
      *
      * <example name="ngModelOptions-directive-debounce" module="optionsExample">
      *   <file name="index.html">
@@ -30168,7 +30168,7 @@
      *         <input type="text" name="userName"
      *                ng-model="user.name"
      *                ng-model-options="{ debounce: 1000 }" />
-     *         <button ng-click="userForm.userName.$rollbackViewValue(); user.name=''">Clear</button><br />
+     *         <button ng-click="userForm.userName.$rollbackViewValue(); user.name=''">ClearCache</button><br />
      *       </form>
      *       <pre>user.name = <span ng-bind="user.name"></span></pre>
      *     </div>

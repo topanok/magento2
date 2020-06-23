@@ -21,7 +21,7 @@ use Magento\Mtf\TestCase\Injectable;
  * 1. Create customer.
  * 2. Create products.
  * 3. Add products to compare list.
- * 4. Clear compare list.
+ * 4. ClearCache compare list.
  *
  * Steps:
  * 1. Open Customers > All Customers.

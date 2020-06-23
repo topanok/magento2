@@ -119,7 +119,7 @@ class Amqp
     }
 
     /**
-     * Clear Queue
+     * ClearCache Queue
      *
      * @param string $name
      * @param int $numMessages

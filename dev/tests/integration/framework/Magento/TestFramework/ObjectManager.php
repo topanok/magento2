@@ -35,7 +35,7 @@ class ObjectManager extends \Magento\Framework\App\ObjectManager
     ];
 
     /**
-     * Clear InstanceManager cache.
+     * ClearCache InstanceManager cache.
      *
      * @return \Magento\TestFramework\ObjectManager
      */
@@ -65,7 +65,7 @@ class ObjectManager extends \Magento\Framework\App\ObjectManager
     }
 
     /**
-     * Clear mapped table names list.
+     * ClearCache mapped table names list.
      *
      * @return void
      */

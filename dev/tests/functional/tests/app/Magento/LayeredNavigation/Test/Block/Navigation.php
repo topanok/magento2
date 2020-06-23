@@ -23,7 +23,7 @@ class Navigation extends Block
     protected $loadedNarrowByList = '#narrow-by-list[role="tablist"]';
 
     /**
-     * Locator value for "Clear All" link.
+     * Locator value for "ClearCache All" link.
      *
      * @var string
      */

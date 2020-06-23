@@ -61,7 +61,7 @@ class BlockRepositoryTest extends WebapiAbstract
     }
 
     /**
-     * Clear temporary data
+     * ClearCache temporary data
      */
     public function tearDown()
     {

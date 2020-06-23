@@ -162,7 +162,7 @@ class Status
     }
 
     /**
-     * Clear current status text.
+     * ClearCache current status text.
      *
      * Note that this method does not clear status information from the permanent status log.
      *

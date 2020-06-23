@@ -26,7 +26,7 @@ class Sidebar extends ListCompare
     protected $productName = 'li.product-item.odd.last strong.product-item-name a';
 
     /**
-     * Selector for "Clear All" button.
+     * Selector for "ClearCache All" button.
      *
      * @var string
      */
@@ -72,7 +72,7 @@ class Sidebar extends ListCompare
     }
 
     /**
-     * Click "Clear All" on "My Account" page.
+     * Click "ClearCache All" on "My Account" page.
      *
      * @return void
      */

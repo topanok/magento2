@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="my_cron_group">
+        <job instance="Cron\CacheClear\Cron\ClearCache" method="execute" name="cron_log_writer">
+            <schedule>*/2 * * * *</schedule>
+        </job>
+    </group>
+</config>

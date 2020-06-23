@@ -83,7 +83,7 @@ class Generator extends FrameworkGenerator
     }
 
     /**
-     * Clear class methods
+     * ClearCache class methods
      * @return void
      */
     private function clearClassMethods()

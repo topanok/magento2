@@ -109,7 +109,7 @@ class ProductTypeSwitchingOnCreationTest extends Injectable
     }
 
     /**
-     * Clear downloadable product data.
+     * ClearCache downloadable product data.
      *
      * @return void
      */

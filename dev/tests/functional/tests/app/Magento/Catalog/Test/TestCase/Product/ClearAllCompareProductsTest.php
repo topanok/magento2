@@ -18,7 +18,7 @@ use Magento\Customer\Test\Page\CustomerAccountIndex;
  * 1. Login to frontend.
  * 2. Add to Compare Product $products.
  * 3. Navigate to My Account page.
- * 4. Click "Clear All" icon under the left menu tabs.
+ * 4. Click "ClearCache All" icon under the left menu tabs.
  * 5. Perform assertions.
  *
  * @group Compare_Products

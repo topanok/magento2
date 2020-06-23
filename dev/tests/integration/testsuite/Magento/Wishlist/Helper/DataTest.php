@@ -33,7 +33,7 @@ class DataTest extends \Magento\TestFramework\TestCase\AbstractController
     }
 
     /**
-     * Clear wishlist helper property
+     * ClearCache wishlist helper property
      */
     protected function tearDown()
     {

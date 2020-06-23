@@ -110,7 +110,7 @@ class DeployStaticContentCommandTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Clear pub/static and var/view_preprocessed directories
+     * ClearCache pub/static and var/view_preprocessed directories
      *
      * @return void
      */

@@ -66,7 +66,7 @@ class ShoppingCartWithFreeShippingTest extends \Magento\Mtf\TestCase\Injectable
     }
 
     /**
-     * Clear data after test.
+     * ClearCache data after test.
      *
      * @return void
      */

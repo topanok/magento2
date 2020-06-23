@@ -1470,7 +1470,7 @@ class Installer
     }
 
     /**
-     * Clear generated/code and reset object manager
+     * ClearCache generated/code and reset object manager
      *
      * @return void
      */

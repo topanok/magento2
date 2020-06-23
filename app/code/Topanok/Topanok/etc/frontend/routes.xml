@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="topanok" frontName="topanok">
+            <module name="Topanok_Topanok" />
+        </route>
+        <route id="topanok1" frontName="productsort">
+            <module name="Topanok_Topanok" />
+        </route>
+    </router>
+</config>

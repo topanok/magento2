@@ -55,7 +55,7 @@ abstract class AbstractModuleCommand extends AbstractSetupCommand
             self::INPUT_KEY_CLEAR_STATIC_CONTENT,
             'c',
             InputOption::VALUE_NONE,
-            'Clear generated static view files. Necessary, if the module(s) have static view files'
+            'ClearCache generated static view files. Necessary, if the module(s) have static view files'
         );
 
         parent::configure();

@@ -146,7 +146,7 @@ class ShoppingCartWithFreeShippingAndFlatRateTest extends \Magento\Mtf\TestCase\
     }
 
     /**
-     * Clear data after test.
+     * ClearCache data after test.
      *
      * @return void
      */

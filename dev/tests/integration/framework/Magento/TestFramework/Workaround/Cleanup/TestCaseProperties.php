@@ -12,7 +12,7 @@ namespace Magento\TestFramework\Workaround\Cleanup;
 class TestCaseProperties
 {
     /**
-     * Clear test method properties after each test suite
+     * ClearCache test method properties after each test suite
      *
      * @param  \PHPUnit\Framework\TestSuite $suite
      */

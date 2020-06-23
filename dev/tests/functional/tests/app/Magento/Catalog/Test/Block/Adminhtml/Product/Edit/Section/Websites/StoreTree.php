@@ -71,7 +71,7 @@ class StoreTree extends SimpleElement
     }
 
     /**
-     * Clear selected checkboxes.
+     * ClearCache selected checkboxes.
      *
      * @return void
      */

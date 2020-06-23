@@ -84,7 +84,7 @@ class NavigateRelatedProductsTest extends AbstractProductPromotedProductsTest
         $lastProduct = $this->products[$lastProductName];
 
         // Steps
-        // Clear shopping cart
+        // ClearCache shopping cart
         $this->checkoutCart->open();
         $this->checkoutCart->getCartBlock()->clearShoppingCart();
 

@@ -189,7 +189,7 @@ abstract class AbstractAssertTaxWithCrossBorderApplying extends AbstractConstrai
     }
 
     /**
-     * Clear shopping cart
+     * ClearCache shopping cart
      *
      * @return void
      */

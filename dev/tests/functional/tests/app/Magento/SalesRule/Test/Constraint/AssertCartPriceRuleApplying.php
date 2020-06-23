@@ -108,7 +108,7 @@ abstract class AssertCartPriceRuleApplying extends AbstractConstraint
      *    - makes logout
      * 3. If "isLoggedIn" not empty
      *    - login as customer
-     * 4. Clear shopping cart
+     * 4. ClearCache shopping cart
      * 5. Add test product(s) to shopping cart with specify quantity
      * 6. If "salesRule/data/coupon_code" not empty:
      *    - fill "Enter your code" input in Dіscount Codes

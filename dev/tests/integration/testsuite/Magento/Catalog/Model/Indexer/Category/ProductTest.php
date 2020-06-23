@@ -264,7 +264,7 @@ class ProductTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Clear index data
+     * ClearCache index data
      */
     protected function clearIndex()
     {

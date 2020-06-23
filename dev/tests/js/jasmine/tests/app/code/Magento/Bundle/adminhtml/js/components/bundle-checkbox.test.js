@@ -49,7 +49,7 @@ define(['Magento_Bundle/js/components/bundle-checkbox', 'uiRegistry'], function 
                 expect(unit.clearValues).not.toHaveBeenCalled();
             });
 
-            it('Clear values for "radio" select type', function () {
+            it('ClearCache values for "radio" select type', function () {
                 spyOn(registry, 'get').and.returnValue(typeMap);
                 spyOn(unit, 'checked').and.returnValue(true);
 

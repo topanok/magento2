@@ -17,7 +17,7 @@ use Magento\Mtf\TestCase\Injectable;
 /**
  * Precondition:
  * 1. Simple product is created
- * 2. Clear shopping cart
+ * 2. ClearCache shopping cart
  *
  * Steps:
  * 1. Go to frontend

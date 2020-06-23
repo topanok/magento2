@@ -91,7 +91,7 @@ class AssertFptApplied extends AbstractConstraint
     }
 
     /**
-     * Clear shopping cart
+     * ClearCache shopping cart
      *
      * @return void
      */

@@ -14,7 +14,7 @@ use Magento\Mtf\Util\Command\Cli\Indexer;
  * Preconditions:
  * 1. Setup Layered Navigation configuration.
  * 2. Run full reindex.
- * 3. Clear cache.
+ * 3. ClearCache cache.
  *
  * Steps:
  * 1. Create category.

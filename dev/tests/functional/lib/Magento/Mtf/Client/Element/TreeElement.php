@@ -64,7 +64,7 @@ class TreeElement extends Tree
     protected $regPatternLabel = '`(.+) \(.*`';
 
     /**
-     * Clear data for element.
+     * ClearCache data for element.
      *
      * @return void
      */

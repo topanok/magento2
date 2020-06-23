@@ -140,7 +140,7 @@ class UpdateOrderStatusForPaymentMethodsObserverTest extends \PHPUnit\Framework\
     }
 
     /**
-     * Clear config cache
+     * ClearCache config cache
      */
     protected function _resetConfig()
     {

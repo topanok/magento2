@@ -66,7 +66,7 @@ class Braintree extends Block
     }
 
     /**
-     * Clear credentials in Braintree configuration.
+     * ClearCache credentials in Braintree configuration.
      *
      * @return void
      */

@@ -67,7 +67,7 @@ abstract class AbstractCatalogRuleEntityTest extends Injectable
     }
 
     /**
-     * Clear data after test.
+     * ClearCache data after test.
      *
      * @return void
      */

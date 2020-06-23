@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <modify_product2>
+            <general>
+                <enable2>1</enable2>
+                <category_multi>0</category_multi>
+            </general>
+        </modify_product2>
+    </default>
+</config>

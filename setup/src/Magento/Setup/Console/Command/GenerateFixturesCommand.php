@@ -137,7 +137,7 @@ class GenerateFixturesCommand extends Command
     }
 
     /**
-     * Clear changelog after generation
+     * ClearCache changelog after generation
      *
      * @return void
      */

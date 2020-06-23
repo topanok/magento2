@@ -1497,7 +1497,7 @@ Sizzle.uniqueSort = function( results ) {
 		}
 	}
 
-	// Clear input after sorting to release objects
+	// ClearCache input after sorting to release objects
 	// See https://github.com/jquery/sizzle/pull/225
 	sortInput = null;
 
@@ -5592,7 +5592,7 @@ jQuery.extend({
 			}
 		}
 
-		// Fix #11356: Clear elements from fragment
+		// Fix #11356: ClearCache elements from fragment
 		if ( tmp ) {
 			safe.removeChild( tmp );
 		}
@@ -9233,7 +9233,7 @@ jQuery.extend({
 			// State is "done" now
 			state = 2;
 
-			// Clear timeout if it exists
+			// ClearCache timeout if it exists
 			if ( timeoutTimer ) {
 				clearTimeout( timeoutTimer );
 			}

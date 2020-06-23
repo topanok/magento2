@@ -564,7 +564,7 @@ class ConditionsElement extends SimpleElement
     }
 
     /**
-     * Clear conditions.
+     * ClearCache conditions.
      *
      * @return void
      */

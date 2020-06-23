@@ -2280,7 +2280,7 @@
 
         // Remove wrapper from fragment
         fragment.textContent = "";
-        fragment.innerHTML = ""; // Clear inner HTML
+        fragment.innerHTML = ""; // ClearCache inner HTML
         return nodes;
     }
 
