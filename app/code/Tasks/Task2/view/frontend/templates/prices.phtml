@@ -1,0 +1,19 @@
+    <?php $prices = $block->getEnabledPrices();
+    if (isset($prices['base_price'])): ?>
+<p>Base prise = <b><?=$prices['base_price'];?></b></p>
+    <?php endif; if(isset($prices['final_price'])): ?>
+<p>Final prise = <b><?=$prices['final_price'];?></b></p>
+    <?php endif; if(isset($prices['special_price'])): ?>
+<p>Special prise = <b><?=$prices['special_price'];?></b></p>
+    <?php endif; if(isset($prices['tier_price'])): ?>
+<h2>Tier prices:</h2>
+    <?php foreach ($prices['tier_price'] as $tier): ?>
+    <p>Tier qty = <b><?=ceil($tier['price_qty']);?></b></p>
+    <p>Tier price = <b><?=round($tier['price'], 2);?></b></p>
+    <?php endforeach; endif; ?>
+    <?php if(isset($prices['catalog_rule_price'])): ?>
+<h2>Rule prices:</h2>
+    <?php foreach ($prices['catalog_rule_price'] as $id => $price): ?>
+    <p>Rule id = <b><?=$id;?></b></p>
+    <p>Rule price = <b><?=round($price, 2);?></b></p>
+    <?php endforeach; endif; ?>

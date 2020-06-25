@@ -10,25 +10,45 @@
             <tab>mageplaza</tab>
             <resource>Tasks_Task2::task2_config</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
-                <label>Checked to enabled prises</label>
+                <label>Select to enabled prises</label>
                 <field id="enable3" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Module Enable</label>
                     <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
                 </field>
-                <field id="base_price" translate="label" type="checkbox" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="base_price" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Use base price</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enable3">1</field>
+                    </depends>
                 </field>
-                <field id="final_price" translate="label" type="checkbox" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="final_price" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Use final price</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enable3">1</field>
+                    </depends>
                 </field>
-                <field id="special_price" translate="label" type="checkbox" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="special_price" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Use special price</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enable3">1</field>
+                    </depends>
                 </field>
-                <field id="tier_price" translate="label" type="checkbox" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="tier_price" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Use tier price</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enable3">1</field>
+                    </depends>
                 </field>
-                <field id="catalog_rule_price" translate="label" type="checkbox" sortOrder="60" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="catalog_rule_price" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Use catalog rule price</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enable3">1</field>
+                    </depends>
                 </field>
             </group>
         </section>

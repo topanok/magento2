@@ -58,23 +58,24 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         if($currProduct != null){
             $data = $currProduct->getCategoryIds();
             $currCategoryId = $data[0];
-        }
-        else{
-            $currCategory = $this->getCurrentCategory();
-            $currCategoryId = $currCategory->getId();
-        }
-        if (in_array($currCategoryId, $catIds)) {
-            return true;
-        } else {
-            return false;
+            if (in_array($currCategoryId, $catIds)) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 
-    /** @return string */
+    /** @return string|null */
     public function getCurrentCategoryName(){
         $category = $this->getCurrentCategory();
-        $currentCategoryName = $category->getName();
-        return $currentCategoryName;
+        if($category) {
+            $currentCategoryName = $category->getName();
+            return $currentCategoryName;
+        }
+        else{
+            return null;
+        }
     }
 
     /**

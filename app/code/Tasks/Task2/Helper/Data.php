@@ -15,17 +15,23 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /** @var string  */
     const XML_PATH = 'modify_product2/';
 
-    /** @var \Magento\Framework\Registry */
-    protected $registry;
-
     /** @var \Magento\Framework\ObjectManagerInterface */
     protected $objectManager;
 
     /** @var \Magento\Store\Model\StoreManagerInterface */
     protected $storeManager;
 
+    /** @var \Magento\Catalog\Api\SpecialPriceInterface */
+    protected $specialPrice;
+
     /** @var \Magento\Customer\Model\Session */
     protected $customerSession;
+
+    /** @var \Magento\Framework\Registry */
+    protected $registry;
+
+    /** @var \Magento\Catalog\Pricing\Render */
+    protected $render;
 
     /**
      * @param \Magento\Framework\App\Helper\Context $context
@@ -33,17 +39,24 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Framework\Registry $registry
      * @param \Magento\Customer\Model\Session $customerSession
+     * @param \Magento\Catalog\Api\SpecialPriceInterface $specialPrice
+     * @param \Magento\Catalog\Pricing\Render $render
      */
     public function __construct(\Magento\Framework\App\Helper\Context $context,
                                 \Magento\Framework\ObjectManagerInterface $objManager,
                                 \Magento\Store\Model\StoreManagerInterface $storeManager,
                                 \Magento\Framework\Registry $registry,
+                                \Magento\Catalog\Api\SpecialPriceInterface $specialPrice,
+                                \Magento\Catalog\Pricing\Render $render,
                                 \Magento\Customer\Model\Session $customerSession)
     {
+
         $this->customerSession = $customerSession;
         $this->registry = $registry;
         $this->storeManager = $storeManager;
         $this->objectManager = $objManager;
+        $this->specialPrice = $specialPrice;
+        $this->render = $render;
         parent::__construct($context);
     }
 
@@ -59,36 +72,36 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         );
     }
 
-
-    public function getCheckboxValues(){
+    /**
+     * @return array
+     */
+    public function getConfigValues(){
         $values = [];
         foreach (self::FIELDS as $field) {
             $values[] = $this->getConfigValue(self::XML_PATH .'general/'. $field);
         }
-        return $values;
+        $keyValue = array_combine(self::FIELDS, $values);
+        return $keyValue;
     }
-
     /**
-     * @return integer
+     * @return array
      */
-    public function getEnableDisableValue(){
-        $value = $this->getConfigValue(self::XML_PATH .'general/'. self::ENABLE);
-        return $value;
-    }
-
-    /**
-     *  @return \Magento\Catalog\Model\Product
-     */
-    public function getCurrentProduct()
-    {
-        return $this->registry->registry('current_product');
+    public function getPricesNames(){
+        $values = $this->getConfigValues();
+        $checked = [];
+        foreach ($values as $key => $value) {
+            if($value == 1){
+                $checked[] = $key;
+            }
+        }
+       return $checked;
     }
 
     /**
      * Verify enable/disable module
      * @return boolean
      */
-    public function enableDisable(){
+    public function getEnableModule(){
         $enable = $this->getConfigValue(self::XML_PATH .'general/'. self::ENABLE);
         if ($enable == 1){
             return true;
@@ -96,9 +109,12 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             return false;
         }
     }
-
-    public function getRulePrice(){
-        $product = $this->getCurrentProduct();
+    /**
+     * Get discount in %
+     * @param \Magento\Catalog\Model\Product
+     * @return array
+     */
+    public function getRulesDiscounts($product){
         $productId = $product->getId();
         $storeId = $product->getStoreId();
         $store = $this->storeManager->getStore($storeId);
@@ -109,27 +125,32 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
          */
         $date = $this->objectManager->create('\Magento\Framework\Stdlib\DateTime\DateTime');
         $dateTs = $date->gmtDate();
-
         /**
          * @var \Magento\CatalogRule\Model\ResourceModel\Rule
          */
         $resource = $this->objectManager->create('\Magento\CatalogRule\Model\ResourceModel\Rule');
         $rules = $resource->getRulesFromProduct($dateTs, $websiteId, $customerGroupId, $productId);
-
-        return $rules;
+        $discounts = [];
+        if(!empty($rules)){
+            foreach($rules as $rule){
+                $discounts[$rule['rule_id']] = $rule['action_amount'];
+            }
+        }
+        return $discounts;
     }
     /**
-     * Get special price
-     * @return float
+     * @return integer|null
      */
-    public function getSpecialPrice(){
-        $currProduct = $this->getCurrentProduct();
-        $specialPrice = $currProduct->getSpecialPrice();
-        return $specialPrice;
+    private function getGroupId()
+    {
+        if ($this->customerSession->isLoggedIn()) {
+            $customerGroup = $this->customerSession->getCustomer()->getGroupId();
+            return $customerGroup;
+        }
     }
-    private function getGroupId(){
-        if($this->customerSession->isLoggedIn()):
-            return $customerGroup=$this->customerSession->getCustomer()->getGroupId();
-        endif;
-    }
+
+    /*public function getSpecialPrices($sku){
+        $specialPrices = $this->specialPrice->get([$sku]);
+        return $specialPrices;
+    }*/
 }
