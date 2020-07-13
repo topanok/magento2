@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mageplaza" translate="label" sortOrder="10">
+            <label>Modify</label>
+        </tab>
+        <section id="one_click_order" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>One Click Order fields </label>
+            <tab>mageplaza</tab>
+            <resource>OneClick_Purchase::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Enable/Disable fields </label>
+                <field id="customer_name" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Name</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="customer_last_name" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Last Name</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="customer_middle_name" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Middle Name</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="customer_telephone" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Telephone</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="customer_email" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+        </section>
+        <section id="methods" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>One Click Order methods</label>
+            <tab>mageplaza</tab>
+            <resource>OneClick_Purchase::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="shipping_method" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Shipping method</label>
+                    <source_model>OneClick\Purchase\Model\Config\Source\ShippingMethods</source_model>
+                </field>
+                <field id="payment_method" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Payment method</label>
+                    <source_model>OneClick\Purchase\Model\Config\Source\PaymentMethods</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

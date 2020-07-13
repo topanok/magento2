@@ -22,7 +22,7 @@ class Product
             $productId = $product->getId();
             $sku = $product->getSku();
             $type = $product->getTypeId();
-            $name .= '          ' . $categoryName . '_' . $productId . '_' . $sku . '_' . $type;
+            $name .= $categoryName . '_' . $productId . '_' . $sku . '_' . $type;
         }
         return $name;
     }

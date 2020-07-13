@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <one_click_order>
+            <general>
+                <customer_name>0</customer_name>
+                <customer_last_name>0</customer_last_name>
+                <customer_middle_name>0</customer_middle_name>
+                <customer_telephone>1</customer_telephone>
+                <customer_email>0</customer_email>
+            </general>
+        </one_click_order>
+    </default>
+    <default>
+        <methods>
+            <general>
+                <shipping_method>freeshipping_freeshipping</shipping_method>
+                <payment_method>checkmo</payment_method>
+            </general>
+        </methods>
+    </default>
+</config>

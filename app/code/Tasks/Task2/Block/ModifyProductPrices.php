@@ -82,7 +82,6 @@ class ModifyProductPrices extends \Magento\Framework\View\Element\Template
                 //$spec = $product->getPriceInfo()->getPrice('special_price')->getValue();
                 //$spec2 = $product->getSpecialPrice();
                 //$spec3 = $this->helper->getSpecialPrices($sku);
-
                 return $prices;
             }
             return null;

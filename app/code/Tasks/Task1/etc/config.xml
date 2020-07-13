@@ -4,7 +4,6 @@
         <modify_product2>
             <general>
                 <enable2>1</enable2>
-                <category_multi>0</category_multi>
             </general>
         </modify_product2>
     </default>
