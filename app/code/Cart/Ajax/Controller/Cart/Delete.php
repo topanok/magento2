@@ -39,13 +39,11 @@ class Delete extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $id = $this->_helper->getProductId();
-        //$itemId = $this->_helper->getProductId();
-        //$allItems = $this->_checkoutSession->getQuote()->getAllVisibleItems();
-        //$this->_cart->removeItem($itemId)->save();
         $this->_cart->removeItem($id);
         $this->_cart->getQuote()->setTotalsCollectedFlag(false);
         $this->_cart->save();
         $result = $this->_jsonFactory->create();
-        return $result->setData(['success' => 'You deleted item from shopping cart.']);
+        //$grandTotal = $this->_cart->getQuote()->getGrandTotal();
+        return $result->setData(['success' => 'true']);
     }
 }

@@ -8,8 +8,8 @@ $data = (array) json_decode($block->getDeletePostJson());
 $id = $data['data']->id;
 ?>
 <a title="<?= $block->escapeHtml(__('Remove item')) ?>"
-   onclick="removeItem('<?=$id; ?>')"
-   class="action action-delete">
+   class="action action-delete"
+   data-item-id="<?=$id;?>">
     <span>
         <?= $block->escapeHtml(__('Remove item')) ?>
     </span>

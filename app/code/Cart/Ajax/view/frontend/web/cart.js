@@ -1,30 +1,25 @@
 define([
-    'ko',
-    'uiComponent',
-        'jquery'
-],
-function(ko, Component, $) {
-    'use strict';
-    return Component.extend({
-        firstName: ko.observable(''),
-        initialize: function() {
-            this._super();
-        },
-        removeItem:  function(){
-            $.ajax({
-                type: "POST",
-                url: "http://mage2.loc/renewcart/cart/delete",
-                data: {
-                    showLoader: true,
-                    'id': id
-                },
-                success: function (data) {
-                    alert('Success');
-                },
-                error: function (data) {
-                    console.log(data);
-                }
-            });
-        }
+    'Magento_Checkout/js/model/quote',
+    'Magento_Checkout/js/model/cart/totals-processor/default',
+    'jquery'
+], function(
+            quote,
+            totalsDefaultProvider,
+            $){
+    $(".action-delete").click(function () {
+        let id = this.dataset.itemId;
+        $.ajax({
+            type: "POST",
+            url: "http://mage2.loc/renewcart/cart/delete",
+            data: {
+                'id': id
+            },
+            success: function (data) {
+                totalsDefaultProvider.estimateTotals(quote.shippingAddress());
+            },
+            error: function (data) {
+                console.log('Bida');
+            }
+        });
     });
 });
