@@ -1,5 +1,7 @@
 var config = {
-    deps: [
-        'Cart_Ajax/cart'
-    ]
+    map: {
+        '*': {
+            ajaxQty: 'Cart_Ajax/js/cartUpdate'
+        }
+    }
 };
