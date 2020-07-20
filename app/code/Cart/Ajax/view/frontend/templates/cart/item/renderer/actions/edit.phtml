@@ -1,16 +1,1 @@
-<?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-/** @var $block \Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit */
-?>
-<?php $id = $block->getItem()->getData('item_id');
-if ($block->isProductVisibleInSiteVisibility()) :?>
-    <a class="action action-edit"
-       data-item-id="<?=$id;?>"
-       title="<?= $block->escapeHtmlAttr(__('Edit item parameters')) ?>">
-        <span><?= $block->escapeHtml(__('Edit')) ?></span>
-    </a>
-<?php endif ?>
+<div hidden></div>

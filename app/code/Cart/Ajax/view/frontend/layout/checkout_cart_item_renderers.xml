@@ -9,16 +9,46 @@
     <update handle="checkout_item_price_renderers"/>
     <body>
         <referenceBlock name="checkout.cart.item.renderers">
-            <block class="Magento\Checkout\Block\Cart\Item\Renderer" name="checkout.cart.item.renderers.default" as="default" template="Magento_Checkout::cart/item/default.phtml">
+            <block class="Magento\Checkout\Block\Cart\Item\Renderer" name="checkout.cart.item.renderers.default" as="default" template="Cart_Ajax::cart/item/default.phtml">
                 <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions" name="checkout.cart.item.renderers.default.actions" as="actions">
-                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit" name="checkout.cart.item.renderers.default.actions.edit" template="Cart_Ajax::cart/item/renderer/actions/edit.phtml"/>
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit" name="checkout.cart.item.renderers.default.actions.edit" template="Magento_Checkout::cart/item/renderer/actions/edit.phtml"/>
                     <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Remove" name="checkout.cart.item.renderers.default.actions.remove" template="Cart_Ajax::cart/item/renderer/actions/remove.phtml"/>
                 </block>
             </block>
-            <block class="Magento\Checkout\Block\Cart\Item\Renderer" name="checkout.cart.item.renderers.simple" as="simple" template="Magento_Checkout::cart/item/default.phtml">
+            <block class="Magento\Checkout\Block\Cart\Item\Renderer" name="checkout.cart.item.renderers.simple" as="simple" template="Cart_Ajax::cart/item/default.phtml">
                 <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions" name="checkout.cart.item.renderers.simple.actions" as="actions">
-                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit" name="checkout.cart.item.renderers.simple.actions.edit" template="Cart_Ajax::cart/item/renderer/actions/edit.phtml"/>
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit" name="checkout.cart.item.renderers.simple.actions.edit" template="Magento_Checkout::cart/item/renderer/actions/edit.phtml"/>
                     <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Remove" name="checkout.cart.item.renderers.simple.actions.remove" template="Cart_Ajax::cart/item/renderer/actions/remove.phtml"/>
+                </block>
+            </block>
+            <block class="Magento\Checkout\Block\Cart\Item\Renderer" name="checkout.cart.item.renderers.virtual" as="virtual" template="Cart_Ajax::cart/item/default.phtml">
+                <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions" name="checkout.cart.item.renderers.virtual.actions" as="actions">
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit" name="checkout.cart.item.renderers.virtual.actions.edit" template="Magento_Checkout::cart/item/renderer/actions/edit.phtml"/>
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Remove" name="checkout.cart.item.renderers.virtual.actions.remove" template="Cart_Ajax::cart/item/renderer/actions/remove.phtml"/>
+                </block>
+            </block>
+            <block class="Magento\ConfigurableProduct\Block\Cart\Item\Renderer\Configurable" name="checkout.cart.item.renderers.configurable" as="configurable" template="Cart_Ajax::cart/item/default.phtml">
+                <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions" name="checkout.cart.item.renderers.configurable.actions" as="actions">
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit" name="checkout.cart.item.renderers.configurable.actions.edit" template="Magento_Checkout::cart/item/renderer/actions/edit.phtml"/>
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Remove" name="checkout.cart.item.renderers.configurable.actions.remove" template="Cart_Ajax::cart/item/renderer/actions/remove.phtml"/>
+                </block>
+            </block>
+            <block class="Magento\Downloadable\Block\Checkout\Cart\Item\Renderer" name="checkout.cart.item.renderers.downloadable" as="downloadable" template="Cart_Ajax::cart/item/default.phtml">
+                <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions" name="checkout.cart.item.renderers.downloadable.actions" as="actions">
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit" name="checkout.cart.item.renderers.downloadable.actions.edit" template="Magento_Checkout::cart/item/renderer/actions/edit.phtml"/>
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Remove" name="checkout.cart.item.renderers.downloadable.actions.remove" template="Cart_Ajax::cart/item/renderer/actions/remove.phtml"/>
+                </block>
+            </block>
+            <block class="Magento\Bundle\Block\Checkout\Cart\Item\Renderer" name="checkout.cart.item.renderers.bundle" as="bundle" template="Cart_Ajax::cart/item/default.phtml">
+                <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions" name="checkout.cart.item.renderers.bundle.actions" as="actions">
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit" name="checkout.cart.item.renderers.bundle.actions.edit" template="Magento_Checkout::cart/item/renderer/actions/edit.phtml"/>
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Remove" name="checkout.cart.item.renderers.bundle.actions.remove" template="Cart_Ajax::cart/item/renderer/actions/remove.phtml"/>
+                </block>
+            </block>
+            <block class="Magento\GroupedProduct\Block\Cart\Item\Renderer\Grouped" name="checkout.cart.item.renderers.grouped" as="grouped" template="Cart_Ajax::cart/item/default.phtml">
+                <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions" name="checkout.cart.item.renderers.grouped.actions" as="actions">
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit" name="checkout.cart.item.renderers.grouped.actions.edit" template="Magento_Checkout::cart/item/renderer/actions/edit.phtml"/>
+                    <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Remove" name="checkout.cart.item.renderers.grouped.actions.remove" template="Cart_Ajax::cart/item/renderer/actions/remove.phtml"/>
                 </block>
             </block>
         </referenceBlock>

@@ -257,7 +257,7 @@ return [
         'OneClick_Purchase' => 0,
         'Payment_TopanokPay' => 0,
         'Shipping_TopanokShipping' => 0,
-        'TaskOrder_Order' => 0,
+        'TaskOrder_Order' => 1,
         'Tasks_Task1' => 0,
         'Tasks_Task2' => 0,
         'Tasks_Task3' => 0,
