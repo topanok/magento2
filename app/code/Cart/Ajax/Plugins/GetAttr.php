@@ -13,9 +13,7 @@ class GetAttr
     public function __construct(\Magento\Framework\Serialize\Serializer\Json $json,
                                 \Magento\ConfigurableProduct\Model\Product\Type\Configurable $configurable)
     {
-
         $this->configurable = $configurable;
-
         $this->jsonSerializer = $json;
     }
 

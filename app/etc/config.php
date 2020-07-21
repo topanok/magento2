@@ -235,7 +235,7 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
-        'AddCustomPrice_Add' => 0,
+        'AddCustomPrice_Add' => 1,
         'AddXml_Add' => 0,
         'Amazon_Core' => 1,
         'Amazon_Login' => 1,

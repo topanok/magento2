@@ -7,7 +7,7 @@
 $data = (array) json_decode($block->getDeletePostJson());
 $id = $data['data']->id;
 ?>
-<a title="<?= $block->escapeHtml(__('Remove item')) ?>"
+<a href="" title="<?= $block->escapeHtml(__('Remove item')) ?>"
    class="action action-delete"
    data-item-id="<?=$id;?>">
     <span>
