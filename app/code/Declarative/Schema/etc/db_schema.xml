@@ -1,0 +1,15 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+        <table name="declarative_schema_sc_table">
+            <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
+            <column xsi:type="varchar" name="name"  nullable="false" length="255" comment="Entity name"/>
+            <column xsi:type="text" name="post"  nullable="false" comment="Post"/>
+            <column xsi:type="decimal" name="price" nullable="false" comment="Price"/>
+            <column xsi:type="boolean" name="status" nullable="true" comment="Status" />
+            <column xsi:type="datetime" name="created_at" comment="Created at"/>
+            <column xsi:type="datetime" name="updated_at" comment="Updated at"/>
+            <constraint xsi:type="primary" referenceId="PRIMARY">
+                <column name="entity_id"/>
+            </constraint>
+        </table>
+</schema>
