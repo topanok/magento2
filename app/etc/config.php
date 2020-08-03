@@ -247,6 +247,7 @@ return [
         'ChangeName_Change' => 0,
         'ChangePrice_Change' => 0,
         'Cron_CacheClear' => 0,
+        'Declarative_Schema' => 1,
         'Dotdigitalgroup_Email' => 1,
         'Event_EventTest' => 0,
         'Home_Posts' => 0,
