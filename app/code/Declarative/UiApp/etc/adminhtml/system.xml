@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mageplaza" translate="label" sortOrder="10">
+            <label>Test UI</label>
+        </tab>
+        <section id="ui_component" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Shipping options</label>
+            <tab>mageplaza</tab>
+            <resource>Declarative_UiApp::config</resource>
+            <group id="test_ui_comp" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>UI settings </label>
+                <field id="active_module_ui" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enable module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="ui_title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Ui Title</label>
+                    <comment><![CDATA[Title for popup]]></comment>
+                </field>
+                <field id="ui_description" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Ui description</label>
+                    <comment><![CDATA[Body description for popup]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

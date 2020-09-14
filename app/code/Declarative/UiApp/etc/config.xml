@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <ui_component>
+            <test_ui_comp>
+                <active_module_ui>1</active_module_ui>
+                <ui_title>Some popup title</ui_title>
+                <ui_description>Some popup description</ui_description>
+            </test_ui_comp>
+        </ui_component>
+    </default>
+</config>
