@@ -1,0 +1,97 @@
+<div class="location">
+    <input type="hidden" id="user-ip">
+    <input type="hidden" id="user-city-hidden">
+    <a href ="#" class="button-choose-location">
+        <img src="https://img.icons8.com/color/48/000000/place-marker.png" height="20px" alt="location"/>
+    </a>
+    <span class="city-name"></span>
+</div>
+
+<div class="mini-popup" hidden="hidden">
+    <center><h3>Ваше місто - <span id="insert-chosen-city"></span>?</h3></center>
+    <button id="confirm-city" data-role="closeBtn">Так</button>
+    <a href="#" id="button-choose-location" class="button-choose-location secondary">Обрати інше</a>
+</div>
+
+<div id="big-popup" class="big-popup" hidden="hidden">
+    <div class="choose-form">
+        <h1>Оберіть своє місто</h1>
+        <form id="quick-search">
+            <input id="livesearch-input" type="text" placeholder="Почніть вводити(мін. 3 символи)" autocomplete="off" size="30">
+            <div id="livesearch"></div>
+            <button type="button" id="saveChosenCity" data-role="closeBtn">Обрати</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    require ([
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function ($) {
+            $(window).on("load", function () {
+                require([
+                    'Ip_City/js/sendIp'
+                ]);
+            });
+        });
+</script>
+
+<style>
+    #button-choose-location{
+        color: white;
+        text-decoration: underline;
+        margin-left: 60px;
+    }
+    #livesearch-input{
+        border-color: white white #696969;
+    }
+    #livesearch{
+        padding-bottom: 25px;
+        border-color: white white #696969;
+    }
+    #saveChosenCity{
+        width: 100%;
+        height:40px;
+        background: red;
+        color: white;
+        border: none;
+        font-size: 14pt;
+    }
+    .city-name{
+        float: left;
+    }
+    .location{
+        float: left;
+        padding-left: 59%;
+    }
+    .choose-form {
+        margin: 15%;
+    }
+    .modal-popup .modal-inner-wrap{
+        width: 45%;
+    }
+    .mini-popup  {
+        z-index: 999999;
+        position: fixed;
+        right:225px;
+        top: 7%;
+        height:100px;
+        width:300px;
+        background: #3d3d3d;
+        opacity: 0.7;
+        border: 1px solid #333;
+        border-radius: 5px;
+    }
+    #confirm-city{
+        margin-left: 35px;
+        background: red;
+        color: white;
+        font-size: 14pt;
+        width:70px;
+    }
+    .selectmenu-item{
+        height: 30px;
+    }
+</style>

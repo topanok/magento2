@@ -1,0 +1,120 @@
+<?php $fields = $block->getFields(); ?>
+<div id="my-popup" class="my-popup" hidden>
+    <div class="order-form">
+        <h1>Купити в 1 клік</h1>
+        <p class="p-title">Введіть свій номер телефону, і ми зв'яжемося з вами, щоб прояснити деталі вашого замовлення</p>
+
+        <?php foreach ($fields as $field): ?>
+        <label class="p-title label"><?= $field['label']; ?></label>
+        <?php if($field['required'] == 'true'): ?>
+        <span class="required">*</span>
+        <?php endif; ?>
+        <input
+               id="order-input-<?= $field['id']; ?>"
+               type="<?= $field['type']; ?>"
+               value="<?= $field['value']; ?>"
+               required="<?= $field['required']; ?>"
+        >
+        <?php endforeach; ?>
+
+        <button type="button" id="order-submit" value="Купити в 1 клік" disabled="disabled">Купити в 1 клік</button>
+        <center><a id="close-window" data-role="closeBtn" href="#">Відмінити</a></center>
+    </div>
+    <div class="preloader" hidden="hidden"><h2 id="preload-text">Завантажую...</h2></div>
+</div>
+
+<style>
+
+    h1{
+        text-align: center;
+    }
+    .p-title{
+        text-align: center;
+        color: #808080;
+        margin-bottom: 40px;
+    }
+    .p-title label{
+        margin-bottom: 30px;
+        color: #808080;
+    }
+    #preload-text{
+        text-align: center;
+        color: #32CD32;
+    }
+    #order-input-telephone{
+        margin-bottom: 30px;
+        border-color: white white #696969; /* Цвет границы */
+        border-style: solid; /* Стиль границы */
+        text-decoration: none;
+    }
+    #order-input-email{
+        margin-bottom: 30px;
+        background: none;
+        border-color: white white #696969; /* Цвет границы */
+        border-style: solid; /* Стиль границы */
+        text-decoration: none;
+    }
+    #order-input-name{
+        margin-bottom: 30px;
+        background: none;
+        border-color: white white #696969; /* Цвет границы */
+        border-style: solid; /* Стиль границы */
+        text-decoration: none;
+    }
+    #order-input-lastname{
+        margin-bottom: 30px;
+        background: none;
+        border-color: white white #696969; /* Цвет границы */
+        border-style: solid; /* Стиль границы */
+        text-decoration: none;
+    }
+    #order-input-middlename{
+        margin-bottom: 30px;
+        background: none;
+        border-color: white white #696969; /* Цвет границы */
+        border-style: solid; /* Стиль границы */
+        text-decoration: none;
+    }
+
+    .order-form {
+        margin: 15%;
+    }
+    #order-submit{
+        color: #fff;
+        text-decoration: none;
+        user-select: none;
+        background: #FF0000;
+        font-size:1.4vw;
+        outline: none;
+        border: none;
+        width: 100%;
+        height: 50px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    #order-submit:hover { background: rgb(232,95,76); }
+    #order-submit:active { background: rgb(152,15,0); }
+    #close-window{
+        border-bottom: 1px dashed #808080;
+        color: #808080;
+    }
+    .required
+    {
+        color: red;
+    }
+    #my-first-modal{
+        width: 70%;
+        top: 0px;
+        z-index: 1;
+        left: 15%;
+    }
+    #p_prldr .svg_anm {
+        position: absolute;
+        width: 41px;
+        height: 41px;
+        background-size:41px;
+        margin: -16px 0 0 -16px;}
+</style>
